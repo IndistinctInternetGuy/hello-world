@@ -1,0 +1,43 @@
+body {
+    margin: 0 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.bg {
+    height: 100dvh;
+    --circle_w: 1px;
+    --circle_color: white;
+    --bg_color: rgba(127, 127, 127, 0.5);
+    --m_bet_circle: 8px;
+    --A: calc(var(--circle_w) + var(--m_bet_circle));
+    --B: calc(var(--circle_w) / 2);
+    background:
+        0 0 / var(--A) var(--A) radial-gradient(circle at center, var(--circle_color) var(--B), var(--bg_color) var(--B)),
+        center / cover url(cat-60.webp) no-repeat;
+}
+
+a {
+    color: white;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
