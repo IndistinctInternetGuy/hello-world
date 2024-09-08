@@ -27,11 +27,7 @@ h1 {
     --B: calc(var(--circle_w) / 2);
     background:
         0 0 / var(--A) var(--A) radial-gradient(circle at center, var(--circle_color) var(--B), var(--bg_color) var(--B)),
-        center / cover url(cat-60.webp) no-repeat;
-}
-
-a {
-    color: white;
+        center / cover url(cat-30.webp) no-repeat;
 }
 
 .fixed-bottom {
