@@ -1,73 +1,15 @@
 body {
     color: white;
     font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1rem;
 }
 
 h1 {
     font-weight: 900;
     font-style: normal;
     letter-spacing: .5rem;
-}
-
-p {
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: .1rem;
-}
-
-.bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -99;
-    background: url("cat-30.webp") center center / cover no-repeat;
-    filter: brightness(0.2);
-}
-
-.bg {
-    height: 100dvh;
-    --circle_w: 1px;
-    --circle_color: rgba(255, 255, 255, 0.5);
-    --bg_color: transparent;
-    --m_bet_circle: 8px;
-    --A: calc(var(--circle_w) + var(--m_bet_circle));
-    --B: calc(var(--circle_w) / 2);
-    background:
-        0 0 / var(--A) var(--A) radial-gradient(circle at center, var(--circle_color) var(--B), var(--bg_color) var(--B));
-}
-
-.container {
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.grow {
-    flex-grow: 1;
-}
-
-.center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.center-text {
-    text-align: center;
-}
-
-.links {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1rem;
-    gap: 2rem;
 }
 
 a {
@@ -85,4 +27,57 @@ a:active {
 
 a:visited {
     color: white;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+    background: url("cat-30.webp") center center / cover no-repeat;
+    filter: brightness(0.2);
+}
+
+.background {
+    height: 100dvh;
+    --dot_size: 1px;
+    --dot_color: rgba(255, 255, 255, 0.5);
+    --bg_color: transparent;
+    --m_bet_circle: 1rem;
+    --A: calc(var(--dot_size) + var(--m_bet_circle));
+    --B: calc(var(--dot_size) / 2);
+    background:
+        0 0 / var(--A) var(--A) radial-gradient(circle at center, var(--dot_color) var(--B), var(--bg_color) var(--B));
+}
+
+.container {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-text {
+    text-align: center;
 }
